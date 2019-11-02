@@ -3,34 +3,64 @@
 <head>
 <link rel="stylesheet" href="css/estilos.css"/>
 <script src="js/script.js"></script>
+<style> 
+
+div {
+  
+  background-color: #006184;;
+    border-color: #bce8f1;
+	text-align: center;
+	color: #FFFFFF;
+  position: relative;
+   -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+}
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {top: 200px; height: 300;}
+  to {top: 0px; height: 80px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+   from {top: 200px; height: 300px;}
+  to {top: 0px; height: 80px;}
+}
+
+
+
+</style>
+<script type="text/javascript">
+    
+    // Total seconds to wait
+    var seconds = 4.9;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            // Chnage your redirection link here
+            window.location = "index2.html";
+        } else {
+            // Update remaining seconds
+           // document.getElementById("countdown").innerHTML = seconds;
+            // Count down using javascript
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+    
+    // Run countdown function
+    countdown();
+    
+</script>
 </head>
 	<body>
-	<div class="tituloAPP">
+	<div class="splash">
 		<h1>APP CONVERSOS</h1>
 	</div>
-		<h2>Seleccione para ver la informacion</h2>
-
-			<!--
-		<ul>
-		  <li>Balaña Robles, Julian Ezequiel</li>
-		  <li>Daniel Donis, Ricardo</li>
-		  <li>Julian, Antonio Nahuel</li>
-		</ul> 
-		-->
-
-		<table id="tabla">
-			<tr>
-				<td>
-					<a href="indicadores.html">Balaña Robles, Julian Ezequiel<a/>
-				</td>
-			</tr>
-			<tr>
-				<td>Daniel Donis, Ricardo</td>
-			</tr>
-			<tr>
-				<td>Julian, Antonio Nahuel</td>
-			</tr>
-		</table>
+		
 
 	</body>
 </html>
